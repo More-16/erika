@@ -1,0 +1,21 @@
+h2{
+    background-color: gray;
+    color: rgb(46, 79, 117);
+}
+ol{
+    list-style: none;
+}
+footer{
+    height: 50px;
+    background-color:  rgb(46, 79, 117);;
+    color: white;
+    text-align: center;
+}
+header{
+    color: rgb(46, 79, 117);
+    background-color: rgb(215, 215, 215);
+    text-align: center;
+}
+h1{
+    background-color: gray;
+}

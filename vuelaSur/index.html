@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VuelaSur | Reservá tu vuelo</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header class="BarraNavegacion">
+        <div class="TituloN">
+            <h1>VuelaSur</h1>
+            <p>Volá por todo el país</p>
+        </div>
+        <nav class="navegacion" aria-label="Navegación principal">
+            <a href="#">Inicio</a>
+            <a href="#">Destinos</a>
+            <a href="#">Reservas</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+
+    
+    <article class="contenedor">
+        <section class="tarjeta">
+            <div class="borde-degradado"></div>
+            <h2>Reservá tu vuelo</h2>
+            <p class="Subtitulo">Completá tus datos y te enviamos la confirmación por correo. Los campos con <span class="obligatorio">*</span> son obligatorios.</p>
+
+            <form>
+                <div>
+                    <legend>Datos del pasajero</legend>
+                    <label for="nombre">Nombre*</label>
+                    <input type="text" id="nombre" name="nombre" >
+                    
+                    <label for="apellido">Apellido*</label>
+                    <input type="text" id="apellido" name="apellido">
+                      
+                    <label for="dni">DNI </label>
+                    <input type="text" id="dni" name="dni">
+                      
+                    <label for="nacimiento">Fecha de nacimiento</label>
+                    <input type="date" id="nacimiento" name="nacimiento">
+                        
+                    <label for="correo">Correo electrónico </label>
+                    <input type="email" id="correo" name="correo">
+                   
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" >
+                </div>
+
+                <div>
+                    <legend>Datos del vuelo</legend>
+                    <div class="opciones tipo-vuelo">
+                        <label><input type="radio" name="tipo_vuelo" value="solo-ida"> Solo ida</label>
+                        <label><input type="radio" name="tipo_vuelo" value="ida-vuelta" checked> Ida y vuelta</label>
+                    </div>
+                    <div>
+                        <label for="origen">Origen</label>
+                        <select id="origen" name="origen" required>
+                            <option value="Cordoba" selected>Córdoba</option>
+                            <option value="Buenos Aires">Buenos Aires</option>
+                            <option value="Mendoza">Mendoza</option>
+                            <option value="Salta">Salta</option>
+                            <option value="Iguazu">Iguazú</option>
+                            <option value="Bariloche">Bariloche</option>
+                            <option value="Ushuaia">Ushuaia</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="destino">Destino</label>
+                        <select id="destino" name="destino" >
+                            <option value="Bariloche" selected>Bariloche</option>
+                            <option value="Buenos Aires">Buenos Aires</option>
+                            <option value="Cordoba">Córdoba</option>
+                            <option value="Mendoza">Mendoza</option>
+                            <option value="Salta">Salta</option>
+                            <option value="Iguazu">Iguazú</option>                                
+                            <option value="Ushuaia">Ushuaia</option>
+                        </select>
+                        </div>
+                    <label for="ida">Fecha de ida <span class="obligatorio">*</span></label>
+                    <input type="date" id="ida" name="ida" required>
+                        
+                    <label for="vuelta">Fecha de vuelta</label>
+                    <input type="date" id="vuelta" name="vuelta">
+                    
+                    <label for="adultos">Adultos</label>
+                    <input type="number" id="adultos" name="adultos">
+                        
+                    <label for="menores">Menores</label>
+                    <input type="number" id="menores" name="menores">
+                        
+                    <label for="bebes">Bebés</label>
+                    <input type="number" id="bebes" name="bebes" min="0" max="9" value="0">
+                       
+                </div>
+                <div>
+                    <legend>Preferencias</legend>
+                    <div class="campo">
+                        <span class="etiqueta">Clase</span>
+                        <div class="opciones">
+                            <label><input type="radio" name="clase" value="economica" checked> Económica</label>
+                            <label><input type="radio" name="clase" value="premium"> Premium</label>
+                            <label><input type="radio" name="clase" value="business"> Business</label>
+                        </div>
+                    </div>
+                </div>
+                <fieldset>
+                    
+                    <div class="campo servicios">
+                        <span class="etiqueta">Servicios adicionales</span>
+                        <div class="opciones">
+                            <label><input type="checkbox" name="servicios" value="valija" checked> Valija en bodega</label>
+                            <label><input type="checkbox" name="servicios" value="asiento"> Elegir asiento</label>
+                            <label><input type="checkbox" name="servicios" value="comida"> Comida a bordo</label>
+                            <label><input type="checkbox" name="servicios" value="seguro"> Seguro de viaje</label>
+                        </div>
+                    </div>
+
+                    <div class="campo comentarios">
+                        <label for="comentarios">Comentarios o necesidades especiales</label>
+                        <textarea id="comentarios" name="comentarios" rows="3" placeholder="Ej: viajo con mascota, necesito asistencia en el embarque..."></textarea>
+                    </div>
+                </fieldset>
+
+                <div class="aceptacion">
+                    <label><input type="checkbox" name="terminos" required> Acepto los términos y condiciones <span class="obligatorio">*</span></label>
+                </div>
+
+                <div class="acciones">
+                    <button class="boton boton-secundario" type="reset">Limpiar</button>
+                    <button class="boton boton-principal" type="submit">Reservar vuelo</button>
+                </div>
+            </form>
+        </section>
+    </article>
+
+    <footer>ProA 2026</footer>
+</body>
+</html>

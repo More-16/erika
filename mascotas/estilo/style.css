@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color:bisque;
+}
+img{
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+}
+article{
+    background-color:rgb(245, 234, 220);
+    border-radius: 10px;
+    display: inline-block;
+    margin-right: 100px;
+    padding: 20px;
+    margin: 17px;
+    flex-direction: row;
+}
